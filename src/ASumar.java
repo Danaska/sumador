@@ -21,8 +21,25 @@ public class ASumar {
         if(numero.startsWith("-")) {
         	return "";
         }
+        if(numero.length() > 1) {
+        	String val = String.join("+", cad.split(""));
+      
+        	return (val + " = " + total(cad));
+        }
         
         return null;
 	}
+	
+    public int total(String cad) {
+        int suma = 0;
+       
+        char[] values = cad.toCharArray();
+        for (char i : values)
+            suma += Integer.parseInt(String.valueOf(i));
+     
+        return suma;
+
+    }
+
 
 }
