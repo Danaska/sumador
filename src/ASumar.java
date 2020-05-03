@@ -8,6 +8,7 @@ public class ASumar {
    /**
     * mostrar es un método para mostrar el numero pasado como parametro.
     * Si solo se le pasa un numero este devuelve " numero = numero"
+    * Si se le pasa un número negativo, devuelve una cadena vacia
     * 
     * @param String cadena de numeros	
     * @return String con el la suma de todos los numeros y el total
@@ -17,6 +18,10 @@ public class ASumar {
         if (numero.length() == 1) {
             return (numero + " = " + numero);
         }
+        if(numero.startsWith("-")) {
+        	return "";
+        }
+        
         return null;
 	}
 
